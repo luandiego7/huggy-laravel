@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Helpers\FormatHelper;
 use App\Models\Lembretes;
+use App\Notifications\Lembrete;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
 
 class LembreteController extends Controller
 {
-
     public function index()
     {
         $lembretes = Lembretes::paginate(5);

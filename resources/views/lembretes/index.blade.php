@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <a href="{{url('/create')}}" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Novo</a>
+                <a href="{{url('/create')}}" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Novo Lembrete</a>
             </div>
         </div>
         <div class="row">
@@ -49,7 +49,7 @@
                 </div>
                 @else
                 <br>
-                <span>Não há lembretes</span>
+                <span>Nenhum lembrete encontrado</span>
                 @endif
             </div>
         </div>

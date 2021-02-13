@@ -1,58 +1,46 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Huggy
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![version](https://img.shields.io/badge/version-5.5-blue.svg)
 
-## About Laravel
+Sistema teste de cadastro e envio de lembretes por e-mail.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Start project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Recomendações para execução do projeto:
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+- Na pasta desejada execute no terminal de comando `git clone https://github.com/luandiego7/huggy-laravel.git`.
+- Dentro do projeto copie `.env.exemple` e cole na mesma pasta renomeando para `.env` e configure adequadamente.
+- No arquivo `.env`, coloque um email válido em `MAIL_USERNAME` e `MAIL_FROM_ADDRESS`, e a senha do e-mail em `MAIL_PASSWORD`.
+- Este projeto está configurado para o gmail, então coloque um e-mail do gmail no passo acima. Caso queira utilizar outro, consulte a documentação do laravel para as cofingurações corretas.
+- Acesse o seu banco de dados MySql, e crie um banco de dados chamado `huggy_laravel`, com usuário root e sem senha. Para os testes deste projeto foi utilizado o xampp.
+- Dentro da pasta `huggy-laravel` execute no terminal de comando `composer update`.
+- E em seguida execute o comando `php artisan key:generate` para gerar uma key (chave) do projeto.
+- E em seguida o comando `php artisan migrate:refresh --seed` para migração dos dados no banco MySQL.
+- E em seguida o comando `php artisan serve` para inicializar o servidor.
+- E por final acesse no navegador desejado o endereço local `http://127.0.0.1:8000` para acesso ao sistema huggy-laravel.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Requisitos para execução do projeto:
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+- PHP
+- MySQL
+- Composer
 
-## Laravel Sponsors
+Em caso de problemas para a execução do projeto execute dentro da pasta huggy-laravel no terminal de comando os seguintes comandos abaixo:
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+- `php artisan cache:clear`
+- `php artisan view:clear`
+- `php artisan route:clear`
+- `php artisan clear-compiled`
+- `composer dump-autoload`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+## Documentação
+A documentação do Laravel está disponível no [website](https://laravel.com/docs/).
 
-## Contributing
+## Suporte nos navegadores
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![](public/images/readme/browsers/chrome.png)
+![](public/images/readme/browsers/firefox.png)
+![](public/images/readme/browsers/edge.png)
+![](public/images/readme/browsers/safari.png)
+![](public/images/readme/browsers/opera.png)

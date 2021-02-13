@@ -30,12 +30,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //$schedule->command('inspire')
-        //          ->hourly();
-        //$schedule->command('lembrete:cron')->everyMinute();
-        /*$schedule->call(function(){
-           Lembretes::create(['nome' => 'teste', 'email' => 'luandiego7@gmail.com', 'data' => '2021-02-14 10:00:00', 'repeticao' => 2]);
-        })->everyMinute();*/
         $lembretes = Lembretes::all();
         foreach($lembretes as $lembrete){
             switch($lembrete->repeticao){

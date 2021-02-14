@@ -24,7 +24,7 @@ Recomendações para execução do projeto:
 - par windows: `* * * * * php C:\xampp\htdocs\huggy-laravel\artisan schedule:run >> /dev/null 2>&1`
 
 - Agora vá na pasta do projeto: `huggy_laravel/app/console/Kernel.php` e descomente a linha 33 e 45. 
-- Execute no terminal o comando `php artisan schedule:run`
+- Pare o servidor do laravel com o comando `ctrl + c`, rode novamente com `php artisan serve`, abra uma nova janela de terminal e execute o comando `php artisan schedule:run`
 
 Requisitos para execução do projeto:
 

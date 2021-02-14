@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $lembretes = Lembretes::all();
+        /*$lembretes = Lembretes::all();
         foreach($lembretes as $lembrete){
             switch($lembrete->repeticao){
                 case 2:{
@@ -42,7 +42,7 @@ class Kernel extends ConsoleKernel
                 }
 
             }
-        }
+        }*/
     }
 
     /**
